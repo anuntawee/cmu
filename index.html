@@ -30,6 +30,37 @@
             font-family: 'Prompt', sans-serif;
             /* Add any additional styling for your body or other elements here */
         }
+
+        .scrollspy-example-item-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ซ่อน popup เริ่มต้น */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* สีพื้นหลังสำหรับ popup */
+            z-index: 9999;
+        }
+
+        /* การจัดหน้า popup */
+        #popup img {
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
     </style>
 </head>
 
@@ -115,14 +146,7 @@
                         <h4 class="text-white mb-4 text-center"> “Building platform
                             for Cross Border E-Commerce Logistic express and Cold chain to support Cross border value
                             chain between Thai-Laos-China, Chiang Khong district.</h4>
-                        <!-- <h2>การสร้างแพลตฟอร์มและเครือข่ายรองรับการค้า CBEC โลจิสติกส์ด่วน
-                                และห่วงโซ่เย็น รองรับห่วงโซ่คุณค่าข้ามแดน ไทย-ลาว-จีน อำเภอเชียงของ”</h2> -->
-                        <!-- <img src="images/Logo บพท..png" alt="" srcset="" width="100px">
-                                <img src="images/Logo อว..png" alt="" srcset="" width="100px">
-                                <img src="images/Logo สกสว.png" alt="" srcset="" width="100px"> -->
-                        <!-- <a href="#section_2" class="btn custom-btn smoothscroll me-3">Discover More</a>
 
-                        <a href="#section_3" class="link link--kale smoothscroll">Meet the Author</a> -->
                     </div>
 
                     <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
@@ -133,43 +157,15 @@
                 </div>
             </div>
         </section>
-
-
         <section class="featured-section">
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-8 col-12">
-                        <!-- <div class="avatar-group d-flex flex-wrap align-items-center">
-                                <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="img-fluid avatar-image" alt="">
-
-                                <img src="images/avatar/portrait-young-redhead-bearded-male.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                <img src="images/avatar/pretty-blonde-woman.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                <img src="images/avatar/studio-portrait-emotional-happy-funny-smiling-boyfriend.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                <div class="reviews-group mt-3 mt-lg-0">
-                                    <strong>4.5</strong>
-
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star"></i>
-
-                                    <small class="ms-3">2,564 reviews</small>
-                                </div>
-                            </div> -->
                     </div>
                 </div>
             </div>
         </section>
-
-
         <section class="py-lg-5"></section>
-
-
         <section class="book-section section-padding" id="section_2">
             <div class="container">
                 <div class="row">
@@ -248,7 +244,8 @@
                                     รวมถึงศูนย์แสดงสินค้าและจำหน่ายสินค้ารองรับระบบ O2O (ตามด้วยแผนภาพ เชียงของ:
                                     ศูนย์กลางอุตสาหกรรม E-Commerce จีน-อาเซียน)</p>
 
-                                <blockquote class="blockquote"> <img src="images/e-commmerce.png" alt="" srcset="" width="100%"></blockquote>
+                                <blockquote class="blockquote"> <img src="images/e-commmerce.png" alt="" srcset=""
+                                        width="100%"></blockquote>
 
                                 <p>ภาพรวมการส่งออกสินค้าประจำปี 2566 ใน 5 อันดับแรกของด่านศุลกากรเชียงของ ได้แก่
                                     ผลไม้สดน้ำมันเครื่อง/เบนซิน/ดีเซล เครื่องอุปโภคบริโภค วัสดุก่อสร้าง
@@ -278,29 +275,38 @@
                                     การส่งออกลำไยสด จากเกษตรกรสวนลำไยในจังหวัดเชียงใหม่ , โรงคัดบรรจุหรือล้ง
                                     และบริษัทขนส่ง
                                 </p>
-                                <img src="images/animationall.gif" class="scrollspy-example-item-image img-fluid mb-3" alt="">                     
-                                <div class="row">
+                                <img src="images/animationall.gif" class="scrollspy-example-item-image img-fluid mb-3"
+                                    alt="">
+                                <div class="row text-center">
                                     <div class="col-lg-6 col-12 mb-3">
-                                        <img src="images/1.png" class="scrollspy-example-item-image img-fluid"
-                                            alt="">
+                                        <!-- รูปภาพหลัก 1 -->
+                                        <img id="mainImage1" src="images/1.png"
+                                            class="scrollspy-example-item-image img-fluid" alt="" width="80%">
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <!-- รูปภาพหลัก 2 -->
+                                        <img id="mainImage2" src="images/2.png"
+                                            class="scrollspy-example-item-image img-fluid" alt="" width="80%">
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <!-- รูปภาพหลัก 3 -->
+                                        <img id="mainImage3" src="images/3.png"
+                                            class="scrollspy-example-item-image img-fluid" alt="" width="80%">
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <!-- รูปภาพหลัก 4 -->
+                                        <img id="mainImage4" src="images/4.png"
+                                            class="scrollspy-example-item-image img-fluid" alt="" width="80%">
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <!-- รูปภาพหลัก 5 -->
+                                        <img id="mainImage5" src="images/5.png"
+                                            class="scrollspy-example-item-image img-fluid" alt="" width="80%">
+                                    </div>
+                                    <div id="popup">
+                                        <img id="popupImage" src="" alt="Popup Image">
                                     </div>
 
-                                    <div class="col-lg-6 col-12 mb-3">
-                                        <img src="images/2.png" class="scrollspy-example-item-image img-fluid"
-                                            alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-12 mb-3">
-                                        <img src="images/3.png" class="scrollspy-example-item-image img-fluid"
-                                            alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-12 mb-3">
-                                        <img src="images/4.png" class="scrollspy-example-item-image img-fluid"
-                                            alt="">
-                                    </div>
-                                    <div class="col-lg-6 col-12 mb-3">
-                                        <img src="images/5.png" class="scrollspy-example-item-image img-fluid"
-                                            alt="">
-                                    </div>
                                 </div>
 
                                 <!-- <p>If you need some specific CSS templates, you can Google with keywords such as
@@ -329,6 +335,7 @@
                                 <img src="images/FreeZone.jpg" class="img-fluid" alt="">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 col-12">
+                                        <br>
                                         <img src="images/loop.gif" class="img-fluid" alt="">
                                     </div>
 
@@ -354,114 +361,79 @@
                                 <p>You are not allowed to redistribute this template ZIP file on any other template
                                     collection website. Please contact TemplateMo for more information.</p> -->
 
-                                <img src="images/maproud.png" class="scrollspy-example-item-image img-fluid mb-3" alt="">
+                                <img src="images/maproud.png" class="scrollspy-example-item-image img-fluid mb-3"
+                                    alt="">
 
                                 <!-- <p>You may want to contact us for more information about this template.</p> -->
                             </div>
 
                             <div class="scrollspy-example-item" id="item-5">
                                 <h5>สื่อวิดีทัศน์</h5>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-12">
-                                            <div class="custom-block d-flex flex-wrap">
-                                                <div class="custom-block-image-wrap d-flex flex-column">
-                                                    <img src="images/fai.jpg" class="img-fluid avatar-image" alt="">
-                    
-                                                    <div class="text-center mt-3">
-                                                        <span class="text-white">Sandy</span>
-                    
-                                                        <strong class="d-block text-white">Artist</strong>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="custom-block-info">
-                                                    <!-- <div class="reviews-group mb-3">
-                                                            <strong>4.5</strong>
-                    
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star"></i>
-                                                        </div> -->
-                    
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-12">
-                                            <div class="custom-block d-flex flex-wrap">
-                                                <div class="custom-block-image-wrap d-flex flex-column">
-                                                    <img src="images/fai.jpg" class="img-fluid avatar-image" alt="">
-                    
-                                                    <div class="text-center mt-3">
-                                                        <span class="text-white">Sandy</span>
-                    
-                                                        <strong class="d-block text-white">Artist</strong>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="custom-block-info">
-                                                    <!-- <div class="reviews-group mb-3">
-                                                            <strong>4.5</strong>
-                    
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star"></i>
-                                                        </div> -->
-                    
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-12">
-                                            <div class="custom-block d-flex flex-wrap">
-                                                <div class="custom-block-image-wrap d-flex flex-column">
-                                                    <img src="images/fai.jpg" class="img-fluid avatar-image" alt="">
-                    
-                                                    <div class="text-center mt-3">
-                                                        <span class="text-white">Sandy</span>
-                    
-                                                        <strong class="d-block text-white">Artist</strong>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="custom-block-info">
-                                                    <!-- <div class="reviews-group mb-3">
-                                                            <strong>4.5</strong>
-                    
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star-fill"></i>
-                                                            <i class="bi-star"></i>
-                                                        </div> -->
-                    
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-12">
+                                        <div class="custom-block d-flex flex-wrap">
+                                            <div class="custom-block-image-wrap d-flex flex-column">
+                                                <img src="images/fai.jpg" class="img-fluid avatar-image" alt="">
 
+                                                <div class="text-center mt-3">
+                                                    <span class="text-white">Sandy</span>
+
+                                                    <strong class="d-block text-white">Artist</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="custom-block-info">
+
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="col-lg-4 col-12">
+                                        <div class="custom-block d-flex flex-wrap">
+                                            <div class="custom-block-image-wrap d-flex flex-column">
+                                                <img src="images/fai.jpg" class="img-fluid avatar-image" alt="">
 
-                                <p>You are not allowed to redistribute this template ZIP file on any other template
-                                    collection website. Please contact TemplateMo for more information.</p>
+                                                <div class="text-center mt-3">
+                                                    <span class="text-white">Sandy</span>
 
-                                <p><strong>What is Free CSS Templates?</strong> Free CSS Templates are a variety of
-                                    ready-made web pages designed for different kinds of websites.</p>
+                                                    <strong class="d-block text-white">Artist</strong>
+                                                </div>
+                                            </div>
 
-                                <blockquote class="blockquote">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan
-                                    omeg kohm tokito</blockquote>
+                                            <div class="custom-block-info">
 
-                                <p>You may browse TemplateMo website for more CSS templates. Thank you for visiting our
-                                    website.</p> -->
+
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-12">
+                                        <div class="custom-block d-flex flex-wrap">
+                                            <div class="custom-block-image-wrap d-flex flex-column">
+                                                <img src="images/fai.jpg" class="img-fluid avatar-image" alt="">
+
+                                                <div class="text-center mt-3">
+                                                    <span class="text-white">Sandy</span>
+
+                                                    <strong class="d-block text-white">Artist</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="custom-block-info">
+
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -470,39 +442,12 @@
             </div>
         </section>
 
-
-        <!-- <section class="author-section section-padding" id="section_3">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <img src="images/fai.jpg" class="author-image img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <h6>Meet Author</h6>
-
-                        <h2 class="mb-4">Prof. Fai come</h2>
-
-                        <p>This is an ebook landing page template with Bootstrap 5 CSS framework. It is easy to
-                            customize with the use of Bootstrap CSS classes.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consive adipisicing elit, sed do eiusmod. tempor incididunt ut
-                            labore.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-
-
         <section class="reviews-section section-padding" id="section_4">
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
 
                     <div class="col-lg-12 col-12 text-center mb-5">
                         <h6>Reviews</h6>
-
                         <h2>What people saying...</h2>
                     </div>
 
@@ -519,7 +464,7 @@
                             </div>
 
                             <div class="custom-block-info">
-                                <!-- <div class="reviews-group mb-3">
+                                <div class="reviews-group mb-3">
                                         <strong>4.5</strong>
 
                                         <i class="bi-star-fill"></i>
@@ -527,7 +472,7 @@
                                         <i class="bi-star-fill"></i>
                                         <i class="bi-star-fill"></i>
                                         <i class="bi-star"></i>
-                                    </div> -->
+                                    </div>
 
                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -548,7 +493,7 @@
                             </div>
 
                             <div class="custom-block-info">
-                                <!-- <div class="reviews-group mb-3">
+                                <div class="reviews-group mb-3">
                                         <strong>3.5</strong>
 
                                         <i class="bi-star-fill"></i>
@@ -556,7 +501,7 @@
                                         <i class="bi-star-fill"></i>
                                         <i class="bi-star"></i>
                                         <i class="bi-star"></i>
-                                    </div> -->
+                                    </div>
 
                                 <p class="mb-0">If you need some specific CSS templates, you can Google with keywords
                                     such as templatemo one-page, templatemo portfolio, etc.</p>
@@ -577,7 +522,7 @@
                             </div>
 
                             <div class="custom-block-info">
-                                <!-- <div class="reviews-group mb-3">
+                                <div class="reviews-group mb-3">
                                         <strong>5</strong>
 
                                         <i class="bi-star-fill"></i>
@@ -585,7 +530,7 @@
                                         <i class="bi-star-fill"></i>
                                         <i class="bi-star-fill"></i>
                                         <i class="bi-star-fill"></i>
-                                    </div> -->
+                                    </div>
 
                                 <p class="mb-0">Please tell your friends about our website that we provide 100% free CSS
                                     templates for everyone. Thank you for using our templates.</p>
@@ -594,7 +539,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
         </section>
 
 
@@ -697,6 +642,24 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        // เพิ่ม event listener สำหรับรูปภาพทุกตัว
+        for (let i = 1; i <= 5; i++) {
+            let mainImage = document.getElementById('mainImage' + i);
+            let popupImage = document.getElementById('popupImage');
+
+            mainImage.addEventListener('click', function () {
+                document.getElementById('popup').style.display = 'block';
+                popupImage.src = 'images/' + i + '.gif';
+            });
+        }
+
+        // เพิ่ม event listener สำหรับปิด popup เมื่อคลิกที่ popup โดยตรง
+        document.getElementById('popup').addEventListener('click', function () {
+            this.style.display = 'none';
+        });
+    </script>
 
 </body>
 
