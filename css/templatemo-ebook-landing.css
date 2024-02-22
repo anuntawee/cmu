@@ -615,6 +615,14 @@ strong {
 /*---------------------------------------
   CUSTOM BLOCK              
 -----------------------------------------*/
+
+.background-video {
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+
 .custom-block {
   background-repeat: no-repeat;
   background-size: cover;
