@@ -494,22 +494,6 @@
         document.getElementById('popup').addEventListener('click', function () {
             this.style.display = 'none';
         });
-
-        document.getElementById("readMoreLink").addEventListener("click", function (event) {
-            event.preventDefault();
-            var section1 = document.getElementById("section_11");
-            var section2 = document.getElementById("section_12");
-            if (section1.style.display === "none") {
-                section1.style.display = "block";
-            } else {
-                section1.style.display = "none";
-            }
-            if (section2.style.display === "none") {
-                section2.style.display = "block";
-            } else {
-                section2.style.display = "none";
-            }
-        });
         function show() {
             event.preventDefault();
             var section = document.getElementById("section_11");
