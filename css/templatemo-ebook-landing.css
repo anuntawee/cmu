@@ -21,7 +21,7 @@
   --h4-font-size:                 24px;
   --h5-font-size:                 22px;
   --h6-font-size:                 20px;
-  --p-font-size:                  16px;
+  --p-font-size:                  18px;
   --menu-font-size:               12px;
   --btn-font-size:                14px;
   --copyright-font-size:          14px;
@@ -1051,4 +1051,37 @@ strong {
     padding: 5px 15px;
   }
 }
+#section_11 {
+  display: none;
+}
+#section_12 {
+  display: none;
+}
+#section_13 {
+  display: none;
+}
+/* ซ่อน popup เริ่มต้น */
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* สีพื้นหลังสำหรับ popup */
+  z-index: 9999;
+}
 
+/* การจัดหน้า popup */
+#popup img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
