@@ -803,7 +803,7 @@ strong {
 -----------------------------------------*/
 .contact-section {
   background: var(--custom-btn-bg-color);
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
 }
 
