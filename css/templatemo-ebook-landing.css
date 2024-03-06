@@ -462,7 +462,7 @@ strong {
 .navbar-nav .nav-link {
   display: inline-block;
   color: var(--white-color);
-  font-size: var(--menu-font-size);
+  font-size: 16px;
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.5px;
   position: relative;
@@ -1064,6 +1064,9 @@ strong {
   display: none;
 }
 #section_13 {
+  display: none;
+}
+#section_14 {
   display: none;
 }
 /* ซ่อน popup เริ่มต้น */
