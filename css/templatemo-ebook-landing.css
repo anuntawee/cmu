@@ -620,6 +620,7 @@ strong {
   border-radius: var(--border-radius-medium);
   position: relative;
   overflow: hidden;
+  height: 300px;
 }
 
 
