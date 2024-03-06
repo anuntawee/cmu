@@ -1069,6 +1069,10 @@ strong {
 #section_14 {
   display: none;
 }
+#img-1{
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
 /* ซ่อน popup เริ่มต้น */
 #popup {
   display: none;
