@@ -228,9 +228,9 @@
                                     ในศูนย์เปลี่ยนถ่ายรูปแบบขนส่งเชียงของ
                                     เพื่อทำหน้าที่เป็นคลังสินค้าสำหรับสินค้าไทยเพื่อเข้าสู่ตลาดประเทศจีน
                                     หรือสำหรับสินค้าจีนที่ต้องการจำหน่ายบนแพลตฟอร์มพาณิชย์อิเล็กทรอนิกส์ประเทศไทย
-                                    <!-- <a href="#section_12" onclick="show2()">อ่านเพิ่มเติม</a> -->
+                                    <a href="#section_12" onclick="show2()">อ่านเพิ่มเติม</a>
                                 </p>
-                                <!-- <section id="section_12">
+                                <section id="section_12">
                                     <p><strong>นอกจากนี้</strong> "ศูนย์เปลี่ยนถ่ายรูปแบบการขนส่งเชียงของ"
                                         มีโอกาสยกระดับสู่การเป็น “เขตปลอดภาษีครบวงจร CBEC” โดยดำเนินกิจกรรมต่างๆ
                                         ในลักษณะของระบบนิเวศที่เกี่ยวข้องกับการค้าพาณิชย์อิเล็กทรอนิกส์ข้ามพรมแดนระหว่างจีน-อาเซียน
@@ -238,7 +238,7 @@
                                         รวมถึงศูนย์แสดงสินค้าและจำหน่ายสินค้ารองรับระบบ O2O
                                         <a href="#section_11" onclick="show2()">ย่อ</a>
                                     </p>
-                                </section> -->
+                                </section>
                                 <img src="images/commmerce.png" alt="" srcset="" width="100%">
                                 <p>ภาพรวมการส่งออกสินค้าประจำปี 2566 ใน 5 อันดับแรกของด่านศุลกากรเชียงของ ได้แก่
                                     ผลไม้สด น้ำมันเครื่อง/เบนซิน/ดีเซล เครื่องอุปโภคบริโภค วัสดุก่อสร้าง
@@ -252,9 +252,9 @@
                                     3.สาธารณรัฐแห่งสหภาพเมียนมา <br>
                                     จากสถิติของด่านศุลกากรเชียงของ ปี 2566 พบว่าช่วงเดือน
                                     เมษายนเป็นช่วงที่มีการส่งออกมากที่สุด
-                                    <a href="#section_14" onclick="show4()">อ่านเพิ่มเติม</a>
+                                    <!-- <a href="#section_14" onclick="show4()">อ่านเพิ่มเติม</a> -->
                                 </p>
-                                <section id="section_14">
+                                <!-- <section id="section_14">
                                     <p><strong>นอกจากนี้</strong> "ศูนย์เปลี่ยนถ่ายรูปแบบการขนส่งเชียงของ"
                                         มีโอกาสยกระดับสู่การเป็น “เขตปลอดภาษีครบวงจร CBEC” โดยดำเนินกิจกรรมต่างๆ
                                         ในลักษณะของระบบนิเวศที่เกี่ยวข้องกับการค้าพาณิชย์อิเล็กทรอนิกส์ข้ามพรมแดนระหว่างจีน-อาเซียน
@@ -262,7 +262,7 @@
                                         รวมถึงศูนย์แสดงสินค้าและจำหน่ายสินค้ารองรับระบบ O2O
                                         <a href="#section_14" onclick="show4()">ย่อ</a>
                                     </p>
-                                </section>
+                                </section> -->
                                 <img src="images/chart.png" alt="" srcset="" width="100%">
                             </div>
                             <div class="scrollspy-example-item" id="item-2">
@@ -595,18 +595,18 @@
                 link.textContent = "อ่านเพิ่มเติม";
             }
         }
-        // function show2() {
-        //     event.preventDefault();
-        //     var section = document.getElementById("section_12");
-        //     var link = document.querySelector('a[href="#section_12"]');
-        //     if (section.style.display === "none") {
-        //         section.style.display = "block";
-        //         link.textContent = "";
-        //     } else {
-        //         section.style.display = "none";
-        //         link.textContent = "อ่านเพิ่มเติม";
-        //     }
-        // }
+        function show2() {
+            event.preventDefault();
+            var section = document.getElementById("section_12");
+            var link = document.querySelector('a[href="#section_12"]');
+            if (section.style.display === "none") {
+                section.style.display = "block";
+                link.textContent = "";
+            } else {
+                section.style.display = "none";
+                link.textContent = "อ่านเพิ่มเติม";
+            }
+        }
         function show3() {
             event.preventDefault();
             var section = document.getElementById("section_13");
@@ -619,18 +619,18 @@
                 link.textContent = "อ่านเพิ่มเติม";
             }
         }
-        function show4() {
-            event.preventDefault();
-            var section = document.getElementById("section_14");
-            var link = document.querySelector('a[href="#section_14"]');
-            if (section.style.display === "none") {
-                section.style.display = "block";
-                link.textContent = "";
-            } else {
-                section.style.display = "none";
-                link.textContent = "อ่านเพิ่มเติม";
-            }
-        }
+        // function show4() {
+        //     event.preventDefault();
+        //     var section = document.getElementById("section_14");
+        //     var link = document.querySelector('a[href="#section_14"]');
+        //     if (section.style.display === "none") {
+        //         section.style.display = "block";
+        //         link.textContent = "";
+        //     } else {
+        //         section.style.display = "none";
+        //         link.textContent = "อ่านเพิ่มเติม";
+        //     }
+        // }
 
     </script>
 
